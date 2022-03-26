@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "./UserContext";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import ContactContext from "./ContactContext";
 
 export default function Contact() {
@@ -74,7 +75,7 @@ export default function Contact() {
                           to={"/users/edit/" + (index + 1)}
                           className="btn btn-sm btn-primary"
                         >
-                          Edit
+                          <EditIcon/>
                         </Link>
                         <button
                           onClick={() => {
@@ -82,7 +83,7 @@ export default function Contact() {
                           }}
                           className="btn btn-sm btn-danger ml-1"
                         >
-                          Delete
+                         <DeleteIcon/>
                         </button>
                       </td>
                     </tr>

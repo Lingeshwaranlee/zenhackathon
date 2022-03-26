@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "./ProductContext";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 export default function Products() {
   const { products, setProducts } = useContext(ProductContext);
@@ -68,7 +70,7 @@ export default function Products() {
                           to={"/products/edit/" + (index + 1)}
                           className="btn btn-sm btn-primary"
                         >
-                          Edit
+                         <EditIcon/>
                         </Link>
                         <button
                           onClick={() => {
@@ -76,7 +78,7 @@ export default function Products() {
                           }}
                           className="btn btn-sm btn-danger ml-1"
                         >
-                          Delete
+                      <DeleteIcon/>
                         </button>
                       </td>
                     </tr>
